@@ -11,6 +11,9 @@ class Day2 extends Day {
   part1(input: string[]): string {
     let validLines = 0;
     for (const line of input) {
+      if (line === '') {
+        continue;
+      }
       const matches = regex.exec(line);
       if (!matches) {
         this.logger.warn(`Unable to parse line: ${line}`);
@@ -34,6 +37,9 @@ class Day2 extends Day {
   part2(input: string[]): string {
     let validLines = 0;
     for (const line of input) {
+      if (line === '') {
+        continue;
+      }
       const matches = regex.exec(line);
       if (!matches) {
         this.logger.warn(`Unable to parse line: ${line}`);

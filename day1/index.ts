@@ -9,7 +9,7 @@ class Day1 extends Day {
   part1(input: string[]): string {
     // const bar = new SingleBar({stopOnComplete: true}, Presets.shades_classic);
     // bar.start(input.length * input.length, 0);
-    const inputAsNumbers = input.map(x => +x);
+    const inputAsNumbers = input.filter(x => x != '').map(x => +x);
     this.logger.debug(inputAsNumbers.length);
     for (let i = 0; i < inputAsNumbers.length; i++) {
       // if(i % 100 === 0) {
@@ -34,7 +34,7 @@ class Day1 extends Day {
   part2(input: string[]): string {
     // const bar = new SingleBar({stopOnComplete: true}, Presets.shades_classic);
     // bar.start(input.length * input.length, 0);
-    const inputAsNumbers = input.map(x => +x);
+    const inputAsNumbers = input.filter(x => x != '').map(x => +x);
     this.logger.debug(inputAsNumbers.length);
     for (let i = 0; i < inputAsNumbers.length; i++) {
       const firstNumber = inputAsNumbers[i];

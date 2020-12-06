@@ -1,0 +1,6 @@
+**/rdEmbed.js
+**/tslint.json
+**/node/**/*.*
+**/pom.xml
+**/target/**/*.*
+**/node_modules/**/*.*

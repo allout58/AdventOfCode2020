@@ -1,0 +1,76 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/docs
+/dist
+/tmp
+/out-tsc
+/build
+
+# Ignore generated graphql type files
+*.gen.ts
+*.gen.d.ts
+
+# DO keep the JSON schema
+!*.gen.json
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+*.iml
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+/.vscode
+for-examination.json
+*.code-workspace
+
+# IDE - VSCode
+.vscode/*
+*.code-workspace
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Maven output
+/target
+/apps/**/target
+
+# Maven Node Plugin
+/node
+/apps/**/node
+
+# Git version information
+/**/environments/version.prod.ts
+
+# Jest JUnit Test Reports
+test-reports/
+
+#Package-Lock.json, so it is more obvious that we use Yarn
+package-lock.json
+
+/apps/mon-svr/src/assets/login*.svg
+/apps/mon-svr/src/assets/mon-svr-product-logo*.svg

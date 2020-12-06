@@ -7,7 +7,7 @@ async function main() {
   consola.info('======== Advent of Code 2020 ========');
   const dayArg = process.argv[2];
   const testOrInput = process.argv[3] ?? 'input';
-  if (testOrInput === 'test') {
+  if (testOrInput.startsWith('test')) {
     consola.level = LogLevel.Verbose;
   }
   const dayDir = resolve(join('.', dayArg));

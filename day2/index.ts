@@ -8,7 +8,7 @@ export default function (logger: Consola) {
 const regex = /(\d+)-(\d+) ([a-z]): ([a-z]+)/;
 
 class Day2 extends Day {
-  part1(input: string[]): string {
+    part1(input: string[]): Promise<string> {
     let validLines = 0;
     for (const line of input) {
       if (line === '') {
@@ -34,7 +34,7 @@ class Day2 extends Day {
     return `${validLines}`;
   }
 
-  part2(input: string[]): string {
+  part2(input: string[]): Promise<string> {
     let validLines = 0;
     for (const line of input) {
       if (line === '') {

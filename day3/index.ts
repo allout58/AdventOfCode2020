@@ -6,7 +6,7 @@ export default function (logger: Consola) {
 }
 
 class Day3 extends Day {
-  part1(input: string[]): string {
+    part1(input: string[]): Promise<string> {
     const matrix = input.filter(x => x != '').map(row => row.split('').map(x => x === '#'));
     let trees = 0;
 
@@ -21,7 +21,7 @@ class Day3 extends Day {
     return `${trees}`;
   }
 
-  part2(input: string[]): string {
+  part2(input: string[]): Promise<string> {
     const slopes: Array<{x: number; y: number}> = [
       {x: 1, y: 1},
       {x: 3, y: 1},

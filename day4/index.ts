@@ -8,7 +8,7 @@ export default function (logger: Consola) {
 const tokens = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'];
 
 class Day4 extends Day {
-  part1(input: string[]): string {
+  part1(input: string[]): Promise<string> {
     let currentTokens: string[] = [];
     let validPassports = 0;
     for (const line of input) {
@@ -26,7 +26,7 @@ class Day4 extends Day {
     return `${validPassports}`;
   }
 
-  part2(input: string[]): string {
+  part2(input: string[]): Promise<string> {
     const validators = {
       byr: (val: string) => {
         const nVal = +val;

@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "new-day": "ts-node new-day.ts",
     "start": "ts-node index.ts"
   },
   "dependencies": {

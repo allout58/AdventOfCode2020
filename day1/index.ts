@@ -6,7 +6,7 @@ export default function (logger: Consola) {
 }
 
 class Day1 extends Day {
-    part1(input: string[]): Promise<string> {
+  async part1(input: string[]): Promise<string> {
     // const bar = new SingleBar({stopOnComplete: true}, Presets.shades_classic);
     // bar.start(input.length * input.length, 0);
     const inputAsNumbers = input.filter(x => x != '').map(x => +x);
@@ -31,7 +31,7 @@ class Day1 extends Day {
     return 'not-found';
   }
 
-  part2(input: string[]): Promise<string> {
+  async part2(input: string[]): Promise<string> {
     // const bar = new SingleBar({stopOnComplete: true}, Presets.shades_classic);
     // bar.start(input.length * input.length, 0);
     const inputAsNumbers = input.filter(x => x != '').map(x => +x);

@@ -30,8 +30,8 @@ fs.writeFileSync(
   `import {Consola} from 'consola';
 import {Day} from '../utils/day';
 
-export default function (logger: Consola) {
-  return new ${dayAsClassName}(logger);
+export default function (logger: Consola, testMode: boolean) {
+  return new ${dayAsClassName}(logger, testMode);
 }
 
 class ${dayAsClassName} extends Day {

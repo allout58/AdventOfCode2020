@@ -7,7 +7,9 @@ async function main() {
   consola.info('======== Advent of Code 2020 ========');
   const dayArg = process.argv[2];
   const testOrInput = process.argv[3] ?? 'input';
+  let testMode = false;
   if (testOrInput.startsWith('test')) {
+    testMode = true;
     consola.level = LogLevel.Verbose;
   }
   const dayDir = resolve(join('.', dayArg));
@@ -17,8 +19,8 @@ async function main() {
     consola.fatal(`Unable to find day ${dayArg}`);
     return;
   }
-  const dayCreator: {default: (logger: Consola) => Day} = require(dayDir);
-  const day = dayCreator.default(consola);
+  const dayCreator: {default: (logger: Consola, testMode: boolean) => Day} = require(dayDir);
+  const day = dayCreator.default(consola, testMode);
   consola.info('=== Part 1 ===');
   try {
     const input1: string = await promises.readFile(resolve(join(dayDir, testOrInput)), {encoding: 'utf-8'});
@@ -26,6 +28,7 @@ async function main() {
     consola.info('Part 1 result: ' + input1Result);
   } catch (e) {
     consola.error('Error doing part 1: ' + e.message);
+    consola.error(e);
   }
 
   consola.info('=== Part 2 ===');
